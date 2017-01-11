@@ -29,7 +29,7 @@ public class HomeController {
 			model.addAttribute("out", "true");
 			return "error";
 		}
-		@RequestMapping(value = "/home")
+		@RequestMapping(value = "/")
 		public String home(Model model) {			
 			return "home";
 		}
