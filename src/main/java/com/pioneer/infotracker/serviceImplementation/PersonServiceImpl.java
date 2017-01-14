@@ -18,8 +18,8 @@ public class PersonServiceImpl implements PersonService{
 	PersonRepo personrepo;
 	
 	@Override
-	public void save(Person person) {
-		personrepo.save(person);
+	public Person save(Person person) {
+		return personrepo.save(person);
 		
 	}
 

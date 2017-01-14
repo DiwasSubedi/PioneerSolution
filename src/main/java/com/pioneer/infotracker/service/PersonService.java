@@ -6,7 +6,7 @@ import com.pioneer.infotracker.domain.Person;
 
 public interface PersonService {
 
-	public void save(Person p);
+	public Person save(Person p);
 	public List<Person> getAll();
 	public Person searchByEmail(String email);
 }

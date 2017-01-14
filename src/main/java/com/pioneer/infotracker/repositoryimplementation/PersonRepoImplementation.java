@@ -19,10 +19,11 @@ public class PersonRepoImplementation implements PersonRepo{
 	private SessionFactory sessionFactory;
 
 	@Override
-	public void save(Person person) {
+	public Person save(Person person) {
 		
 		Session sess = sessionFactory.getCurrentSession();
 		sess.persist(person);
+		return person;
 	}
 
 	

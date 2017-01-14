@@ -6,19 +6,25 @@
 	    $routeProvider
 	    .when("/", {
 	        templateUrl : contextRoot + "/PartialPages/MainPage.html",
-	        /*controller : "myCtrl"*/
+	        controller : "mainController"
 	    })
-	    .when("/user/:searchname", {
-	        templateUrl : contextRoot + "/results",
+	     .when("/login", {
+	        templateUrl : contextRoot + "/PartialPages/login.jsp",
+	        controller : "mainController"
+	    })
+	      .when("/home", {
+	        templateUrl : contextRoot + "/PartialPages/MainPage.html",
+	        controller : "mainController"
+	    })
+	    .when("/logout", {
+	        templateUrl : contextRoot + "/PartialPages/MainPage.html",
+	        controller : "mainController"
+	        
+	    })
+	    .when("/SignUp", {
+	        templateUrl : contextRoot + "/PartialPages/SignUp.html",
 	        controller : "userController"
 	    })
-	     .when("/user/:searchname/:accNumber", {
-	        templateUrl : contextRoot + "/bankResults",
-	        controller : "bankController"
-	    }).when("/test", {
-	        templateUrl : contextRoot + "/resources/partialpage/test1.html",
-	        controller : "userController"
-	    })	   
 	    .otherwise({
 	        template : "<h1>None</h1><p>Nothing has been selected,</p>"
 	    });
