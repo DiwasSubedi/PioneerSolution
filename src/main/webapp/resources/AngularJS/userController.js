@@ -21,21 +21,25 @@
 			$http.get("http://localhost:8080/infotracker/newPerson").then(getNew,onError);
 			var getNew = function(response){
 				newperson=response.data;
-				console.log(newperson);
+				
+				alert(objToString(person));
+				newperson = person;
 			};
 			
-			$http({
+			alert(newperson);
+		/*	$http({
 				'url' : 'students',
 				'method' : 'POST',
 				'headers' : {
 					'Content-Type' : 'application/json'
 				},
-				'data' : person
+				'data' : newperson
 			}).success(function(data) {
 				$scope.success = "sucessfully added";
 			}).error(function(data) {
-				alert('Error: ' + data);
-			});
+				
+				alert(newperson);
+			});*/
 			
 			//alert(objToString(person));
 			//$http.post("http://localhost:8080/infotracker/user/student/" +person).then(onPostCompletion,onError);

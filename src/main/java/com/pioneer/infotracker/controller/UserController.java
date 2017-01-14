@@ -26,7 +26,9 @@ public class UserController {
 	@RequestMapping(value="/students",method=RequestMethod.POST)
 	@ResponseBody
 	public Person saveStudent(@RequestBody Person person){
-		//Person p = personService.save(person);
+		System.out.println(person.getfName());
+		System.out.println(person.getlName());
+
 		return person;
 	}
 	
@@ -36,7 +38,7 @@ public class UserController {
 	public Person giveNewStudent(){
 		Person p = new Person();
 		Address a =new Address();
-		List<Address> list = new ArrayList<Address>();
+		List<Address> list= new ArrayList<Address>();
 		list.add(a);
 		Credentials c =new Credentials();
 		p.setCredentials(c);
